@@ -11,3 +11,9 @@ scripts:
 icon: ":twemoji:frog:currentColor:"
 dependencies:
   oomol-preview: 0.0.1
+name: coqui-tts
+description: coqui TTS is a library for advanced Text-to-Speech generation. This
+  is a wrapper for coqui TTS.
+displayName: coqui TTS
+repository: https://github.com/oomol-flows/coqui-tts
+releaseNotes: init the first version.
