@@ -4,7 +4,7 @@ nodes:
     node_id: speech#1
     inputs_from:
       - handle: speaker
-        value: /oomol-driver/downloads/samples_zh-cn-sample.wav
+        value: /app/workspace/example/samples_zh-cn-sample.wav
       - handle: output_path
         value:
       - handle: text
@@ -22,7 +22,7 @@ nodes:
       - handle: model
         value: tts_models/multilingual/multi-dataset/xtts_v2
       - handle: model_path
-        value: /oomol-driver/oomol-storage/coqui_modles
+        value:
       - handle: device
         value: cpu
   - task: oomol-preview::audio-preview
