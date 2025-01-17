@@ -1,0 +1,11 @@
+version: 0.0.1
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    set -e
+    sudo apt-get update
+    sudo apt-get install -y rustc cargo
+    pip install --upgrade pip
+    pip install -r requirements.txt
+icon: ":twemoji:frog:currentColor:"
