@@ -1,0 +1,59 @@
+inputs_def:
+  - handle: text
+    json_schema:
+      type: string
+      ui:widget: text
+      minLength: 1
+  - handle: model
+    json_schema:
+      contentMediaType: oomol/var
+    kind: model
+  - handle: speaker
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: file
+  - handle: language
+    json_schema:
+      enum:
+        - zh-cn
+        - en
+        - es
+        - fr
+        - de
+        - it
+        - pt
+        - pl
+        - tr
+        - ru
+        - nl
+        - cs
+        - ar
+        - hu
+        - ko
+        - ja
+        - hi
+      ui:options:
+        labels:
+          []
+    value:
+    nullable: true
+  - handle: output_path
+    json_schema:
+      type: string
+      ui:widget: file
+    value:
+    nullable: true
+outputs_def:
+  - handle: output_path
+    json_schema:
+      type: string
+      ui:widget: file
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: __init__.py
+title: Speech
