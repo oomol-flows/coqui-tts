@@ -1,16 +1,38 @@
 {
   "nodes": {
-    "+python#1": {
+    "speech#1": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 177,
-          "y": 126
+          "x": 829.2457078044225,
+          "y": 185.44525368660612
         }
       },
       "sections": {
-        "scriptlet": {
-          "cardCollapsed": true
+        "inputs": {
+          "collapsed": {
+            "text": {
+              "[]": false
+            }
+          }
+        }
+      }
+    },
+    "model#2": {
+      "contentWidth": 443.1714091352669,
+      "rfNode": {
+        "position": {
+          "x": 288.3552645166859,
+          "y": 185.44525368660612
+        }
+      }
+    },
+    "audio-preview#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1381.2812244426045,
+          "y": 185.44525368660612
         }
       }
     }

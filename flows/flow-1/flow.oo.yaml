@@ -1,34 +1,35 @@
 nodes:
-  - task:
-      ui:
-        default_width: 450
-      inputs_def:
-        - handle: speaker
-          description: Input
-          json_schema:
-            type: string
-            ui:widget: file
-        - handle: target
-          json_schema:
-            type: string
-            ui:widget: file
-        - handle: cache_dir
-          json_schema:
-            type: string
-            ui:widget: dir
-      outputs_def:
-        []
-      executor:
-        name: python
-        options:
-          entry: scriptlets/+python#1.py
-    title: "Python #1"
-    icon: ":logos:python:"
-    node_id: +python#1
+  - task: self::speech
+    title: "Speech #1"
+    node_id: speech#1
     inputs_from:
       - handle: speaker
         value: /oomol-driver/downloads/samples_zh-cn-sample.wav
-      - handle: target
-        value: /oomol-driver/oomol-storage/Audio/target.wav
-      - handle: cache_dir
+      - handle: output_path
+        value:
+      - handle: text
+        value: 大家好，我是渣渣辉。欢迎大家一起来玩贪玩蓝月！贪玩蓝月真的好好玩，大家一起来充钱，是兄弟就来砍我
+      - handle: model
+        from_node:
+          - node_id: model#2
+            output_handle: model
+      - handle: language
+        value: zh-cn
+  - task: self::model
+    title: "Load model #2"
+    node_id: model#2
+    inputs_from:
+      - handle: model
+        value: tts_models/multilingual/multi-dataset/xtts_v2
+      - handle: model_path
         value: /oomol-driver/oomol-storage/coqui_modles
+      - handle: device
+        value: cpu
+  - task: oomol-preview::audio-preview
+    title: "Audio preview #1"
+    node_id: audio-preview#1
+    inputs_from:
+      - handle: audio_path
+        from_node:
+          - node_id: speech#1
+            output_handle: output_path
