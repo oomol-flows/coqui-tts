@@ -1,28 +1,28 @@
 nodes:
-  - task: self::speech
-    title: "Speech #1"
+  - task: self::tts
+    title: "TTS"
     node_id: speech#1
     inputs_from:
       - handle: speaker
-        value: /app/workspace/example/samples_zh-cn-sample.wav
+        value: /oomol-driver/downloads/901092498-1-208.mp3
       - handle: output_path
         value:
       - handle: text
-        value: 大家好，我是渣渣辉。欢迎大家一起来玩贪玩蓝月！贪玩蓝月真的好好玩，大家一起来充钱，是兄弟就来砍我
+        value: 大家好，我是林志玲。你们加班幸苦了，我来请大家喝咖啡。你们想喝什么都可以和志玲姐姐说哦。
       - handle: model
         from_node:
           - node_id: model#2
             output_handle: model
       - handle: language
         value: zh-cn
-  - task: self::model
-    title: "Load model #2"
+  - task: self::model-tts
+    title: "Load TTS model"
     node_id: model#2
     inputs_from:
       - handle: model
         value: tts_models/multilingual/multi-dataset/xtts_v2
       - handle: model_path
-        value:
+        value: /oomol-driver/oomol-storage/coqui_modles
       - handle: device
         value: cpu
   - task: oomol-preview::audio-preview

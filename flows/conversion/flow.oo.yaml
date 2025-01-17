@@ -1,0 +1,9 @@
+nodes:
+  - task: self::conversion
+    title: "Conversion #1"
+    node_id: conversion#1
+    inputs_from:
+      - handle: input
+      - handle: model
+        from_node:
+          []

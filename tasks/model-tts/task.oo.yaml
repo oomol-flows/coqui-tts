@@ -169,7 +169,7 @@ outputs_def:
   - handle: model
     json_schema:
       contentMediaType: oomol/var
-    kind: model
-title: Load model
+    kind: tts_model
+title: Load TTS model
 ui:
   default_width: 443.1714091352669
