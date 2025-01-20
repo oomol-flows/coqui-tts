@@ -3,11 +3,104 @@ executor:
   options:
     entry: __init__.py
 inputs_def:
-  - handle: input
+  - handle: model
+    json_schema:
+      enum:
+        - voice_conversion_models/multilingual/vctk/freevc24
+      ui:options:
+        labels:
+          - xtts_v2
+          - xtts_v1.1
+          - your_tts
+          - bark
+          - bg/cv/vits
+          - cs/cv/vits
+          - da/cv/vits
+          - et/cv/vits
+          - ga/cv/vits
+          - en/ek1/tacotron2
+          - en/ljspeech/tacotron2-DDC
+          - en/ljspeech/tacotron2-DDC_ph
+          - en/ljspeech/glow-tts
+          - en/ljspeech/speedy-speech
+          - en/ljspeech/tacotron2-DCA
+          - en/ljspeech/vits
+          - en/ljspeech/vits--neon
+          - en/ljspeech/fast_pitch
+          - en/ljspeech/overflow
+          - en/ljspeech/neural_hmm
+          - en/vctk/vits
+          - en/vctk/fast_pitch
+          - en/sam/tacotron-DDC
+          - en/blizzard2013/capacitron-t2-c50
+          - en/blizzard2013/capacitron-t2-c150_v2
+          - en/multi-dataset/tortoise-v2
+          - en/jenny/jenny
+          - es/mai/tacotron2-DDC
+          - es/css10/vits
+          - fr/mai/tacotron2-DDC
+          - fr/css10/vits
+          - uk/mai/glow-tts
+          - uk/mai/vits
+          - zh-CN/baker/tacotron2-DDC-GST
+          - nl/mai/tacotron2-DDC
+          - nl/css10/vits
+          - de/thorsten/tacotron2-DCA
+          - de/thorsten/vits
+          - de/thorsten/tacotron2-DDC
+          - de/css10/vits-neon
+          - ja/kokoro/tacotron2-DDC
+          - tr/common-voice/glow-tts
+          - it/mai_female/glow-tts
+          - it/mai_female/vits
+          - it/mai_male/glow-tts
+          - it/mai_male/vits
+          - ewe/openbible/vits
+          - hau/openbible/vits
+          - lin/openbible/vits
+          - tw_akuapem/openbible/vits
+          - tw_asante/openbible/vits
+          - yor/openbible/vits
+          - hu/css10/vits
+          - el/cv/vits
+          - fi/css10/vits
+          - hr/cv/vits
+          - lt/cv/vits
+          - lv/cv/vits
+          - mt/cv/vits
+          - pl/mai_female/vits
+          - pt/cv/vits
+          - ro/cv/vits
+          - sk/cv/vits
+          - sl/cv/vits
+          - sv/cv/vits
+          - ca/custom/vits
+          - fa/custom/glow-tts
+          - bn/custom/vits-male
+          - bn/custom/vits-female
+          - be/common-voice/glow-tts
+    value: voice_conversion_models/multilingual/vctk/freevc24
+  - handle: model_path
     json_schema:
       type: string
+      ui:widget: dir
+    nullable: true
+    value:
+  - handle: device
+    json_schema:
+      enum:
+        - cpu
+        - cuda
+      ui:options:
+        labels:
+          - CPU
+          - CUDA
+    value: cpu
 outputs_def:
-  - handle: output
+  - handle: model
     json_schema:
-      type: string
+      contentMediaType: oomol/var
+    kind: conversion_model
 title: Load conversion model
+ui:
+  default_width: 383.79171762837996

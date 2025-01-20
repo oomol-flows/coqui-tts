@@ -1,5 +1,4 @@
 import os
-import torch
 
 from oocana import Context
 from TTS.api import TTS

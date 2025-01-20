@@ -3,15 +3,29 @@ executor:
   options:
     entry: __init__.py
 inputs_def:
-  - handle: input
-    json_schema:
-      type: string
   - handle: model
     json_schema:
       contentMediaType: oomol/var
-    kind: model
-outputs_def:
-  - handle: output
+    kind: conversion_model
+  - handle: source_speaker
     json_schema:
       type: string
+      ui:widget: file
+  - handle: target_speaker
+    json_schema:
+      type: string
+      ui:widget: file
+  - handle: output_path
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: true
+    value:
+outputs_def:
+  - handle: output_path
+    json_schema:
+      type: string
+    kind: conversion_model
 title: Conversion
+ui:
+  default_width: 444.1232510653409
