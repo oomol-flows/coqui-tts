@@ -1,0 +1,31 @@
+nodes:
+  - task: self::model-conversion
+    title: "Load conversion model #2"
+    node_id: model-conversion#2
+    inputs_from:
+      - handle: model
+        value: voice_conversion_models/multilingual/vctk/freevc24
+      - handle: model_path
+        value:
+      - handle: device
+        value: cpu
+  - task: self::conversion
+    title: "Conversion #1"
+    node_id: conversion#1
+    inputs_from:
+      - handle: model
+        from_node:
+          - node_id: model-conversion#2
+            output_handle: model
+      - handle: source_speaker
+      - handle: target_speaker
+      - handle: output_path
+        value:
+  - task: oomol-preview::audio-preview
+    title: "Audio preview #1"
+    node_id: audio-preview#1
+    inputs_from:
+      - handle: audio_path
+        from_node:
+          - node_id: conversion#1
+            output_handle: output_path
