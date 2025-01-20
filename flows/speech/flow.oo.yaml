@@ -4,11 +4,10 @@ nodes:
     node_id: speech#1
     inputs_from:
       - handle: speaker
-        value: /oomol-driver/downloads/901092498-1-208.mp3
       - handle: output_path
         value:
       - handle: text
-        value: 大家好，我是林志玲。你们加班幸苦了，我来请大家喝咖啡。你们想喝什么都可以和志玲姐姐说哦。
+        value: ""
       - handle: model
         from_node:
           - node_id: model#2
@@ -22,7 +21,7 @@ nodes:
       - handle: model
         value: tts_models/multilingual/multi-dataset/xtts_v2
       - handle: model_path
-        value: /oomol-driver/oomol-storage/coqui_modles
+        value:
       - handle: device
         value: cpu
   - task: oomol-preview::audio-preview
