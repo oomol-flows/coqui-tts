@@ -1,4 +1,4 @@
-version: 0.0.1
+version: 0.0.2
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -15,5 +15,5 @@ name: coqui-tts
 description: coqui TTS is a library for advanced Text-to-Speech generation. This
   is a wrapper for coqui TTS.
 displayName: coqui TTS
+releaseNotes: support conversion logic
 repository: https://github.com/oomol-flows/coqui-tts
-releaseNotes: init the first version.
