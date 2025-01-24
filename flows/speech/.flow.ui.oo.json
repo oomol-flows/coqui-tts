@@ -27,11 +27,11 @@
         }
       }
     },
-    "audio-preview#1": {
+    "audio_preview#1": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 1381.2812244426045,
+          "x": 1360.2865625766694,
           "y": 185.44525368660612
         }
       }

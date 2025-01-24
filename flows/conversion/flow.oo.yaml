@@ -21,9 +21,9 @@ nodes:
       - handle: target_speaker
       - handle: output_path
         value:
-  - task: oomol-preview::audio-preview
+  - task: oomol-preview::audio_preview
     title: "Audio preview #1"
-    node_id: audio-preview#1
+    node_id: audio_preview#1
     inputs_from:
       - handle: audio_path
         from_node:

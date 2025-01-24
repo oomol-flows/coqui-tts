@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.3
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -10,10 +10,10 @@ scripts:
     pip install -r requirements.txt
 icon: ":twemoji:frog:currentColor:"
 dependencies:
-  oomol-preview: 0.0.1
+  oomol-preview: 0.0.2
 name: coqui-tts
 description: coqui TTS is a library for advanced Text-to-Speech generation. This
   is a wrapper for coqui TTS.
 displayName: coqui TTS
-releaseNotes: support conversion logic
+releaseNotes: upgrade oomol-preview
 repository: https://github.com/oomol-flows/coqui-tts
