@@ -24,9 +24,9 @@ nodes:
         value:
       - handle: device
         value: cpu
-  - task: oomol-preview::audio-preview
+  - task: oomol-preview::audio_preview
     title: "Audio preview #1"
-    node_id: audio-preview#1
+    node_id: audio_preview#1
     inputs_from:
       - handle: audio_path
         from_node:
