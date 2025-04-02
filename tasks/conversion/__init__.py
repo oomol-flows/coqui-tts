@@ -11,7 +11,7 @@ def main(params: dict, context: Context):
 
   if output_path is None:
     output_path = os.path.join(
-      context.session_dir, 
+      context.session_dir,
       f"{context.job_id}.wav",
     )
 
