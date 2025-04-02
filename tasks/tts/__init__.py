@@ -13,13 +13,13 @@ def main(params: dict, context: Context):
 
   if output_path is None:
     output_path = os.path.join(
-      context.session_dir, 
+      context.session_dir,
       f"{context.job_id}.wav",
     )
   tts.tts_to_file(
-    text=text, 
-    speaker_wav=speaker_path, 
-    language=cast(str, language), 
+    text=text,
+    speaker_wav=speaker_path,
+    language=cast(str, language),
     file_path=output_path,
   )
   return { "output_path": output_path }

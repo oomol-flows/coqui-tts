@@ -10,7 +10,7 @@ scripts:
     pip install -r requirements.txt
 icon: ":twemoji:frog:currentColor:"
 dependencies:
-  oomol-preview: 0.0.2
+  oomol-preview: 0.0.3
 name: coqui-tts
 description: coqui TTS is a library for advanced Text-to-Speech generation. This
   is a wrapper for coqui TTS.
