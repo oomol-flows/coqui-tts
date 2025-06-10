@@ -1,4 +1,4 @@
-version: 0.0.3
+version: 0.0.4
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -6,14 +6,13 @@ scripts:
     set -e
     sudo apt-get update
     sudo apt-get install -y rustc cargo
-    pip install --upgrade pip
-    pip install -r requirements.txt
+    poetry install --no-root
 icon: ":twemoji:frog:currentColor:"
 dependencies:
-  oomol-preview: 0.0.3
+  oomol-preview: 0.0.4
 name: coqui-tts
 description: coqui TTS is a library for advanced Text-to-Speech generation. This
   is a wrapper for coqui TTS.
 displayName: coqui TTS
-releaseNotes: upgrade oomol-preview
+releaseNotes: migrate to poetry.
 repository: https://github.com/oomol-flows/coqui-tts
