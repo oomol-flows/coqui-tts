@@ -164,7 +164,7 @@ inputs_def:
         labels:
           - CPU
           - CUDA
-    value: cpu
+    value: cuda
 outputs_def:
   - handle: model
     json_schema:

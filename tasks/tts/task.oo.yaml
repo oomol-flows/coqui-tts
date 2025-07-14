@@ -13,6 +13,13 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: file
+      ui:options:
+        excludeAll: true
+        filters:
+          - name: WAV
+            extensions:
+              - wav
+              - wave
   - handle: language
     json_schema:
       enum:
@@ -41,14 +48,28 @@ inputs_def:
   - handle: output_path
     json_schema:
       type: string
-      ui:widget: file
+      ui:widget: save
+      ui:options:
+        excludeAll: true
+        filters:
+          - name: WAV
+            extensions:
+              - wav
+              - wave
     value:
     nullable: true
 outputs_def:
   - handle: output_path
     json_schema:
       type: string
-      ui:widget: file
+      ui:widget: save
+      ui:options:
+        excludeAll: true
+        filters:
+          - name: WAV
+            extensions:
+              - wav
+              - wave
 ui:
   default_width: 450
 executor:

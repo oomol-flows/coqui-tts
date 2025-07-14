@@ -7,7 +7,6 @@ nodes:
       - handle: output_path
         value:
       - handle: text
-        value: ""
       - handle: model
         from_node:
           - node_id: model#2
@@ -23,7 +22,7 @@ nodes:
       - handle: model_path
         value:
       - handle: device
-        value: cpu
+        value: cuda
   - task: oomol-preview::audio_preview
     title: "Audio preview #1"
     node_id: audio_preview#1

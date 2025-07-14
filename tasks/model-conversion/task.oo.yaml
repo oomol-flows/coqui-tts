@@ -84,8 +84,8 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: dir
-    nullable: true
     value:
+    nullable: true
   - handle: device
     json_schema:
       enum:
@@ -95,7 +95,7 @@ inputs_def:
         labels:
           - CPU
           - CUDA
-    value: cpu
+    value: cuda
 outputs_def:
   - handle: model
     json_schema:

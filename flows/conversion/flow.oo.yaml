@@ -8,7 +8,7 @@ nodes:
       - handle: model_path
         value:
       - handle: device
-        value: cpu
+        value: cuda
   - task: self::conversion
     title: "Conversion #1"
     node_id: conversion#1
