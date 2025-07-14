@@ -9,7 +9,7 @@ scripts:
     poetry install --no-root
 icon: ":twemoji:frog:currentColor:"
 dependencies:
-  oomol-preview: 0.0.4
+  oomol-preview: 0.1.0
 name: coqui-tts
 description: coqui TTS is a library for advanced Text-to-Speech generation. This
   is a wrapper for coqui TTS.
