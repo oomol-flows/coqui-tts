@@ -3,7 +3,7 @@ name = "coaui-tts"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "TaoZeyu",email = "i@taozeyu.com"}
+    {name = "Tao Zeyu",email = "i@taozeyu.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.10,<3.12"

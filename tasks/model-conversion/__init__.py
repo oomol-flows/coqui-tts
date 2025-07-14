@@ -4,6 +4,7 @@ import torch
 from TTS.api import TTS
 from typing import Literal
 
+
 def main(params: dict):
   model: str = params["model"]
   model_path: str = params["model_path"]

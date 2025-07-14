@@ -4,6 +4,7 @@ from oocana import Context
 from TTS.api import TTS
 from typing import cast
 
+
 def main(params: dict, context: Context):
   text: str = params["text"]
   tts: TTS = params["model"]
